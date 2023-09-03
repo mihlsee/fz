@@ -1,0 +1,2993 @@
+html {
+    font-size: 10px;
+}
+
+html::-webkit-scrollbar {
+    width: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+    height: 6%;
+    background-color: rgba(100, 100, 100, 1);
+    border-radius: 10px;
+}
+
+body {
+    min-height: 100vh;
+    flex-direction: column;
+    display: flex;
+}
+
+/*主页box*/
+.banner {
+    height: 200px;
+    background-color: #3e3e3e85;
+}
+
+.banner img {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    width: 100%;
+}
+
+.box {
+    max-width: 950px;
+    margin: 0 auto;
+    background: 0 0;
+    color: var(--theme-0);
+    border-radius: .25rem;
+    color: #fff;
+    min-height: 500px;
+}
+
+.box .box-header {
+    background-color: var(--theme-6);
+    color: var(--theme-1);
+    display: flex;
+    align-items: center;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+
+.box .box-header .box-title {
+    margin: 0;
+    padding: 2rem .5rem;
+    font-size: 2rem;
+    flex: 1;
+    text-align: center;
+    /* margin-bottom: 1.5rem; */
+}
+
+.box .box-header+.box-body {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.box .box-header+.box-body a {
+    color: #fff;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+/* @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+    } */
+
+.sidebar .game_logo {
+    height: 4.5rem !important;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.sidebar .game_logo img {
+    height: 100%;
+    width: auto;
+}
+
+@media all and (min-width:0px) {
+    #top_menu {
+        width: 100%;
+        min-height: 7rem;
+        display: flex;
+        background: rgb(15, 15, 30);
+    }
+
+    #top_menu .container {
+        width: 100%;
+    }
+
+    #top_menu .container .first_section {
+        width: 90%;
+        height: 5rem;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        margin: auto;
+        align-items: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    #top_menu .container .first_section .openbtn {
+        height: 60%;
+        width: auto;
+        max-width: 3rem;
+        cursor: pointer
+    }
+
+    #top_menu .container .first_section .openbtn img {
+        height: 100%;
+        max-width: 3rem;
+        width: auto;
+    }
+
+    #top_menu .container .first_section a .companylogo {
+        height: 3rem;
+        width: auto;
+    }
+
+    #top_menu .container .first_section a .companylogo img {
+        height: 100%;
+        width: auto;
+    }
+
+    #top_menu .container .first_section .mobile_game_display {
+        height: 4.5rem;
+        width: auto;
+    }
+
+    #top_menu .container .first_section .mobile_game_display img {
+        height: 100%;
+        width: auto;
+    }
+
+    #top_menu .container .second_section {
+        display: none;
+    }
+}
+
+@media all and (min-width:991px) {
+    #top_menu {
+        width: 100%;
+        height: 5rem;
+        background: rgb(15, 15, 30);
+
+    }
+
+    #top_menu .container {
+        max-width: 1110px;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between
+    }
+
+    #top_menu .container .first_section {
+        width: 14rem;
+        height: 100%;
+        display: flex;
+        flex-flow: row;
+        justify-content: flex-start;
+        margin: 0;
+        align-items: center;
+        order: 1
+    }
+
+    #top_menu .container .first_section .openbtn {
+        width: 0;
+        height: 0;
+        display: none
+    }
+
+    #top_menu .container .first_section .openbtn img {
+        height: 0;
+        width: 0;
+    }
+
+    #top_menu .container .first_section a .companylogo {
+        height: 8rem;
+        width: auto;
+    }
+
+    #top_menu .container .first_section a .companylogo img {
+        height: 100%;
+        width: auto;
+    }
+
+    #top_menu .container .first_section .mobile_game_display {
+        height: 0rem;
+        width: 0;
+        display: none;
+    }
+
+    #top_menu .container .first_section .mobile_game_display img {
+        height: 100%;
+        width: auto;
+    }
+
+    #top_menu .container .second_section {
+        width: 810px;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        order: 2;
+    }
+
+    #top_menu .container .second_section a {
+        height: 1.5rem;
+        max-width: 20rem;
+        float: left;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: rgb(200, 160, 100);
+        font-size: 1.7rem;
+        /* font-family: 'NanumSquare', sans-serif !important; */
+        /* font-size:1.5rem;
+            font-family: 'Noto Sans KR', sans-serif; */
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+        border-right: 1px solid rgb(200, 160, 100);
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    #top_menu .container .second_section a.ready {
+        color: rgb(100, 100, 100);
+    }
+
+    #top_menu .container .second_section a.inspection {
+        color: rgb(100, 100, 100);
+    }
+
+    #top_menu .container .second_section a.change_policy {
+        color: rgb(100, 100, 100);
+    }
+
+
+
+    #top_menu .container .second_section a:nth-last-child(1) {
+        border-right: none;
+    }
+}
+
+#content {
+    width: 100%;
+    flex: 1;
+    background-color: rgb(30, 30, 40);
+}
+
+
+
+.footer {
+    width: 100%;
+    min-height: 12rem;
+    background: rgb(50, 50, 50);
+    display: flex;
+    flex-flow: wrap;
+    background-image: url(./img/footer_logo.png);
+    /* background-repeat: repeat; */
+    background-size: cover;
+    background-position-y: center;
+}
+
+@media all and (min-width:0px) {
+    .footer .footer_first {
+        display: none;
+    }
+
+    .footer .footer_second {
+        width: 100%;
+        min-height: 12rem;
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.1rem;
+        color: rgb(150, 150, 150);
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        text-align: center;
+    }
+
+    .footer .footer_second div {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+        width: 100%;
+    }
+
+    .footer .footer_second .about_4 a {
+        text-decoration: none;
+    }
+
+    .footer .footer_second .about_4 .business_info {
+        color: rgb(190, 190, 190)
+    }
+
+    .footer .footer_third {
+        width: 100%;
+        min-height: 7rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .footer .footer_third .footer_third_board {
+        width: 40rem;
+        height: 7rem;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+        align-items: center;
+        border: 2px solid rgb(150, 150, 150);
+        border-radius: 0.7rem;
+    }
+
+    .footer .footer_third .ascro_mark {
+        border-radius: 50%;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .footer .footer_third .ascro_mark img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .footer .footer_third .ascro_explain {
+        width: 30rem;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+
+    }
+
+    .footer .footer_third .ascro_explain .explain_1 {
+        font-size: 1.3rem;
+        color: rgb(190, 190, 190);
+        /* font-family: 'Noto Sans KR', sans-serif;
+    }
+
+    .footer .footer_third .ascro_explain .explain_2 {
+        font-size: 1.1rem;
+        color: rgb(150, 150, 150);
+        /* font-family: 'Noto Sans KR', sans-serif; */
+    }
+
+    .footer .footer_third .ascro_explain .explain_3 {
+        font-size: 1.1rem;
+        color: rgb(150, 150, 150);
+        /* font-family: 'Noto Sans KR', sans-serif; */
+    }
+}
+
+
+@media all and (min-width:991px) {
+
+    .footer .footer_first,
+    .footer .footer_third {
+        width: 33.3%;
+        min-height: 12rem;
+    }
+
+    .footer .footer_first {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer .footer_first img {
+        width: 22rem;
+        height: auto;
+    }
+
+    .footer .footer_second {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+        color: rgb(150, 150, 150)
+    }
+
+    .footer .footer_second {
+        width: 33%;
+        min-height: 12rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .footer_second div {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+
+    .footer_second .about_4 a {
+        text-decoration: none;
+    }
+
+    .footer_second .about_4 .business_info {
+        color: rgb(190, 190, 190)
+    }
+
+    .footer .footer_third {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer .footer_third .footer_third_board {
+        width: 40rem;
+        height: 7rem;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+        align-items: center;
+        border: 2px solid rgb(150, 150, 150);
+        border-radius: 0.7rem;
+    }
+
+    .footer .footer_third .ascro_mark {
+        border-radius: 50%;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .footer .footer_third .ascro_mark img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .footer .footer_third .ascro_explain {
+        width: 30rem;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+
+    }
+
+    .footer .footer_third .ascro_explain .explain_1 {
+        font-size: 1.3rem;
+        color: rgb(190, 190, 190);
+        /* font-family: 'Noto Sans KR', sans-serif; */
+    }
+
+    .footer .footer_third .ascro_explain .explain_2 {
+        font-size: 1.1rem;
+        color: rgb(150, 150, 150);
+        /* font-family: 'Noto Sans KR', sans-serif; */
+    }
+
+    .footer .footer_third .ascro_explain .explain_3 {
+        font-size: 1.1rem;
+        color: rgb(150, 150, 150);
+        /* font-family: 'Noto Sans KR', sans-serif; */
+    }
+}
+
+.second_footer {
+    width: 100%;
+    height: 3rem;
+    background: rgb(30, 30, 30);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.second_footer .copywright {
+    font-size: 1.1rem;
+    color: rgb(100, 100, 100);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.second_footer .personalinfo_used {
+    font-size: 1.1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.second_footer .personalinfo_used a {
+    text-decoration: none;
+    color: rgb(190, 190, 190);
+}
+
+.second_footer .usage_contract {
+    font-size: 1.1rem;
+    color: rgb(190, 190, 190);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.second_footer .usage_contract a {
+    text-decoration: none;
+    color: rgb(190, 190, 190);
+}
+
+.market {
+    cursor: pointer
+}
+
+.inner_content {
+    width: 100%;
+    height: auto;
+    background-color: rgb(30, 30, 40);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.inner_content .auction_house_top {
+    width: 100%;
+    max-width: 170rem;
+    min-height: 93rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-color: rgb(20, 20, 25);
+}
+
+@media all and (min-width:0px) {
+    .inner_content .auction_house_top .top_menu {
+        width: 100%;
+        height: 4rem;
+        margin-bottom: 4rem;
+        display: flex;
+        flex-flow: row;
+        font-size: 1.6rem;
+
+    }
+}
+
+@media all and (min-width:1100px) {
+    .inner_content .auction_house_top .top_menu {
+        width: 100%;
+        height: 5rem;
+        margin-bottom: 4rem;
+        display: flex;
+        flex-flow: row;
+        font-size: 1.8rem;
+
+    }
+}
+
+.inner_content .auction_house_top .top_menu div {
+    width: 33.33%;
+    height: 100%;
+    background-color: rgb(20, 20, 25);
+    border-bottom: 2px solid rgb(96, 70, 199);
+    /* font-family: 'NanumSquare', sans-serif !important; */
+    color: white;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.inner_content .auction_house_top .top_menu .top_menu_calculator {
+    background: rgb(96, 70, 199);
+}
+
+
+.inner_content .auction_house_top .top_lostark_search {
+    width: 43%;
+    min-width: 37rem;
+    height: 4rem;
+    margin-bottom: 4rem;
+}
+
+.inner_content .auction_house_top .top_lostark_search input {
+    width: 80%;
+    height: 4rem;
+    background-color: rgb(50, 50, 50);
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+    /* font-family: 'Noto Sans KR', sans-serif; */
+    font-size: 1.6rem;
+    color: rgb(190, 190, 190);
+    text-align: center;
+}
+
+.inner_content .auction_house_top .top_lostark_search input:focus {
+    outline: none;
+}
+
+.inner_content .auction_house_top .top_carving_calculator {
+    width: 100%;
+    max-width: 165rem;
+    height: 67rem;
+    display: flex;
+    flex-flow: column;
+    overflow-x: auto;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_menu_box {
+    width: 165rem;
+    height: 4rem;
+    display: flex;
+    flex-flow: row;
+    background-color: rgb(50, 50, 50);
+    border: 1px solid rgb(100, 100, 100);
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_menu_box .calculator_menu_classify {
+    width: 9rem;
+    height: auto;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.4rem;
+    color: white;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid rgb(100, 100, 100);
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_menu_box .calculator_menu_carving_1,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_menu_box .calculator_menu_carving_2,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_menu_box .calculator_menu_carving_3,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_menu_box .calculator_menu_carving_4,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_menu_box .calculator_menu_carving_5,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_menu_box .calculator_menu_carving_6 {
+    width: 13rem;
+    height: auto;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.4rem;
+    color: white;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid rgb(100, 100, 100);
+    cursor: pointer;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_menu_box .calculator_menu_carving_1 img,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_menu_box .calculator_menu_carving_2 img,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_menu_box .calculator_menu_carving_3 img,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_menu_box .calculator_menu_carving_4 img,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_menu_box .calculator_menu_carving_5 img,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_menu_box .calculator_menu_carving_6 img {
+    margin-left: 0.3rem;
+
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_menu_box .calculator_menu_decline {
+    width: 18rem;
+    height: auto;
+    /* font-family: 'Noto Sans KR', sans-serif; */
+    font-size: 1.4rem;
+    color: white;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid rgb(100, 100, 100);
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_menu_box .calculator_menu_fatal,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_menu_box .calculator_menu_specialization,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_menu_box .calculator_menu_quick,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_menu_box .calculator_menu_subdue,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_menu_box .calculator_menu_patience,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_menu_box .calculator_menu_proficiency {
+    width: 10rem;
+    height: auto;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.4rem;
+    color: white;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid rgb(100, 100, 100);
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_menu_box .calculator_menu_quality {
+    width: 11rem;
+    height: auto;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.4rem;
+    color: white;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid rgb(100, 100, 100);
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_menu_box .calculator_menu_search {
+    width: 9rem;
+    height: auto;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.4rem;
+    color: white;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid rgb(100, 100, 100);
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box {
+    width: 165rem;
+    height: 6rem;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    border-bottom: 1px solid rgb(50, 50, 50);
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box .calculator_inner_necklace {
+    width: 9rem;
+    height: auto;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.4rem;
+    color: white;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box .calculator_inner_necklace_carving_1,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box .calculator_inner_necklace_carving_2,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box .calculator_inner_necklace_carving_3,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box .calculator_inner_necklace_carving_4,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box .calculator_inner_necklace_carving_5,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box .calculator_inner_necklace_carving_6 {
+    width: 11rem;
+    height: 3rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.6rem;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box .calculator_inner_necklace_decline {
+    width: 16rem;
+    height: 3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    background: rgb(30, 30, 40);
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box .calculator_inner_necklace_fatal,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box .calculator_inner_necklace_specialization,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box .calculator_inner_necklace_quick,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box .calculator_inner_necklace_subdue,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box .calculator_inner_necklace_patience,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box .calculator_inner_necklace_proficiency {
+    width: 8rem;
+    height: 3rem;
+    background-color: rgb(30, 30, 40);
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box .calculator_inner_necklace_quality {
+    width: 9rem;
+    height: 3rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.4rem;
+    color: white;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box .calculator_inner_necklace_search {
+    width: 7rem;
+    height: 3rem;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box .calculator_necklace_select select {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(30, 30, 40);
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+    color: rgb(150, 150, 150)
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box .calculator_necklace_select select:focus {
+    outline: none;
+}
+
+/* -------------------------목걸이▲------------------------------- */
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_2 {
+    width: 165rem;
+    height: 6rem;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    border-bottom: 1px solid rgb(50, 50, 50);
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_2 .calculator_inner_earring {
+    width: 9rem;
+    height: auto;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.4rem;
+    color: white;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_2 .calculator_inner_earring_carving_1,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_2 .calculator_inner_earring_carving_2,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_2 .calculator_inner_earring_carving_3,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_2 .calculator_inner_earring_carving_4,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_2 .calculator_inner_earring_carving_5,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_2 .calculator_inner_earring_carving_6 {
+    width: 11rem;
+    height: 3rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.6rem;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_2 .calculator_inner_earring_decline {
+    width: 16rem;
+    height: 3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    background-color: rgb(30, 30, 40);
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_2 .calculator_inner_earring_fatal,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_2 .calculator_inner_earring_specialization,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_2 .calculator_inner_earring_quick,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_2 .calculator_inner_earring_subdue,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_2 .calculator_inner_earring_patience,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_2 .calculator_inner_earring_proficiency {
+    width: 8rem;
+    height: 3rem;
+    background-color: rgb(30, 30, 40);
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_2 .calculator_inner_earring_quality {
+    width: 9rem;
+    height: 3rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.4rem;
+    color: white;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_2 .calculator_inner_earring_search {
+    width: 7rem;
+    height: 3rem;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_2 .calculator_earring_select select {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(30, 30, 40);
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+    color: rgb(150, 150, 150);
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_2 .calculator_earring_select select:focus {
+    outline: none;
+}
+
+/* -------------------------耳环▲------------------------------- */
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_3 {
+    width: 165rem;
+    height: 6rem;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    border-bottom: 1px solid rgb(50, 50, 50);
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_3 .calculator_inner_earring2 {
+    width: 9rem;
+    height: auto;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.4rem;
+    color: white;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_3 .calculator_inner_earring2_carving_1,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_3 .calculator_inner_earring2_carving_2,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_3 .calculator_inner_earring2_carving_3,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_3 .calculator_inner_earring2_carving_4,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_3 .calculator_inner_earring2_carving_5,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_3 .calculator_inner_earring2_carving_6 {
+    width: 11rem;
+    height: 3rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.6rem;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_3 .calculator_inner_earring2_decline {
+    width: 16rem;
+    height: 3rem;
+    background-color: rgb(30, 30, 40);
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_3 .calculator_inner_earring2_decline input:focus {
+    outline: none;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_3 .calculator_inner_earring2_fatal,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_3 .calculator_inner_earring2_specialization,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_3 .calculator_inner_earring2_quick,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_3 .calculator_inner_earring2_subdue,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_3 .calculator_inner_earring2_patience,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_3 .calculator_inner_earring2_proficiency {
+    width: 8rem;
+    height: 3rem;
+    background-color: rgb(30, 30, 40);
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_3 .calculator_inner_earring2_quality {
+    width: 9rem;
+    height: 3rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.4rem;
+    color: white;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_3 .calculator_inner_earring2_search {
+    width: 7rem;
+    height: 3rem;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_3 .calculator_earring2_select select {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(30, 30, 40);
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+    color: rgb(150, 150, 150);
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_3 .calculator_earring2_select select:focus {
+    outline: none;
+}
+
+/* -------------------------耳环2▲------------------------------- */
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_4 {
+    width: 165rem;
+    height: 6rem;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    border-bottom: 1px solid rgb(50, 50, 50);
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_4 .calculator_inner_ring {
+    width: 9rem;
+    height: auto;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.4rem;
+    color: white;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_4 .calculator_inner_ring_carving_1,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_4 .calculator_inner_ring_carving_2,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_4 .calculator_inner_ring_carving_3,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_4 .calculator_inner_ring_carving_4,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_4 .calculator_inner_ring_carving_5,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_4 .calculator_inner_ring_carving_6 {
+    width: 11rem;
+    height: 3rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.6rem;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_4 .calculator_inner_ring_decline {
+    width: 16rem;
+    height: 3rem;
+    background-color: rgb(30, 30, 40);
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_4 .calculator_inner_ring_fatal,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_4 .calculator_inner_ring_specialization,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_4 .calculator_inner_ring_quick,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_4 .calculator_inner_ring_subdue,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_4 .calculator_inner_ring_patience,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_4 .calculator_inner_ring_proficiency {
+    width: 8rem;
+    height: 3rem;
+    background-color: rgb(30, 30, 40);
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_4 .calculator_inner_ring_quality {
+    width: 9rem;
+    height: 3rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.4rem;
+    color: white;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_4 .calculator_inner_ring_search {
+    width: 7rem;
+    height: 3rem;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_4 .calculator_ring_select select {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(30, 30, 40);
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+    color: rgb(150, 150, 150);
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_4 .calculator_ring_select select:focus {
+    outline: none;
+}
+
+/* -------------------------戒指▲------------------------------- */
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_5 {
+    width: 165rem;
+    height: 6rem;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    border-bottom: 1px solid rgb(50, 50, 50);
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_5 .calculator_inner_ring_engrave {
+    width: 9rem;
+    height: auto;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.4rem;
+    color: white;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_5 .calculator_inner_ring_engrave_carving_1,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_5 .calculator_inner_ring_engrave_carving_2,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_5 .calculator_inner_ring_engrave_carving_3,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_5 .calculator_inner_ring_engrave_carving_4,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_5 .calculator_inner_ring_engrave_carving_5,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_5 .calculator_inner_ring_engrave_carving_6 {
+    width: 11rem;
+    height: 3rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.6rem;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_5 .calculator_ring_engrave_select select {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(30, 30, 40);
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+    color: rgb(150, 150, 150);
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_5 .calculator_ring_engrave_select select:focus {
+    outline: none;
+}
+
+/* -------------------------戒指각인▲------------------------------- */
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_6 {
+    width: 165rem;
+    height: 6rem;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    border-bottom: 1px solid rgb(50, 50, 50);
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_6 .calculator_inner_ring2 {
+    width: 9rem;
+    height: auto;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.4rem;
+    color: white;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_6 .calculator_inner_ring2_carving_1,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_6 .calculator_inner_ring2_carving_2,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_6 .calculator_inner_ring2_carving_3,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_6 .calculator_inner_ring2_carving_4,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_6 .calculator_inner_ring2_carving_5,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_6 .calculator_inner_ring2_carving_6 {
+    width: 11rem;
+    height: 3rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.6rem;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_6 .calculator_inner_ring2_decline {
+    width: 16rem;
+    height: 3rem;
+    background-color: rgb(30, 30, 40);
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_6 .calculator_inner_ring2_fatal,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_6 .calculator_inner_ring2_specialization,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_6 .calculator_inner_ring2_quick,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_6 .calculator_inner_ring2_subdue,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_6 .calculator_inner_ring2_patience,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_6 .calculator_inner_ring2_proficiency {
+    width: 8rem;
+    height: 3rem;
+    background-color: rgb(30, 30, 40);
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_6 .calculator_inner_ring2_quality {
+    width: 9rem;
+    height: 3rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.4rem;
+    color: white;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_6 .calculator_inner_ring2_search {
+    width: 7rem;
+    height: 3rem;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_6 .calculator_ring2_select select {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(30, 30, 40);
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+    color: rgb(150, 150, 150);
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_6 .calculator_ring2_select select:focus {
+    outline: none;
+}
+
+/* -------------------------戒指2▲------------------------------- */
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_7 {
+    width: 165rem;
+    height: 6rem;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    border-bottom: 1px solid rgb(50, 50, 50);
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_7 .calculator_inner_ring_engrave2 {
+    width: 9rem;
+    height: auto;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.4rem;
+    color: white;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_7 .calculator_inner_ring_engrave2_carving_1,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_7 .calculator_inner_ring_engrave2_carving_2,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_7 .calculator_inner_ring_engrave2_carving_3,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_7 .calculator_inner_ring_engrave2_carving_4,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_7 .calculator_inner_ring_engrave2_carving_5,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_7 .calculator_inner_ring_engrave2_carving_6 {
+    width: 11rem;
+    height: 3rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.6rem;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_7 .calculator_ring_engrave2_select select {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(30, 30, 40);
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+    color: rgb(150, 150, 150);
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_7 .calculator_ring_engrave2_select select:focus {
+    outline: none;
+}
+
+/* -------------------------戒指각인2▲------------------------------- */
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_8 {
+    width: 165rem;
+    height: 6rem;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    border-bottom: 1px solid rgb(96, 70, 199);
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_8 .calculator_inner_stone {
+    width: 9rem;
+    height: auto;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.4rem;
+    color: white;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_8 .calculator_inner_stone_carving_1,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_8 .calculator_inner_stone_carving_2,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_8 .calculator_inner_stone_carving_3,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_8 .calculator_inner_stone_carving_4,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_8 .calculator_inner_stone_carving_5,
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_8 .calculator_inner_stone_carving_6 {
+    width: 11rem;
+    height: 3rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.6rem;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_8 .calculator_inner_stone_decline {
+    width: 16rem;
+    height: 3rem;
+    background-color: rgb(30, 30, 40);
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_8 .calculator_inner_stone_quality {
+    width: 9rem;
+    height: 3rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.4rem;
+    color: white;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 43rem;
+    margin-right: 1rem;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_8 .calculator_stone_select select {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(30, 30, 40);
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+    color: rgb(150, 150, 150);
+}
+
+.inner_content .auction_house_top .top_carving_calculator .carving_calculator_inner_box_8 .calculator_stone_select select:focus {
+    outline: none;
+}
+
+/*------------------돌--------------------*/
+.inner_content .auction_house_top .top_carving_calculator .calculator_activity_box {
+    width: 165rem;
+    height: 19rem;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    border-bottom: 1px solid rgb(96, 70, 199);
+}
+
+.inner_content .auction_house_top .top_carving_calculator .calculator_activity_box .calculator_activity {
+    width: 9rem;
+    height: 19rem;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.4rem;
+    color: white;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .calculator_activity_box .calculator_result_box {
+    width: 13rem;
+    height: 8.5rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .calculator_activity_box .calculator_skill_img {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 35px;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .calculator_activity_box .calculator_skill_img img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.inner_content .auction_house_top .top_carving_calculator .calculator_activity_box .calculator_skill {
+    width: 13rem;
+    height: 3rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.4rem;
+    color: white;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .calculator_activity_box .calculator_skill_lv {
+    width: 13rem;
+    height: 2rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.4rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .calculator_blank_box {
+    width: 18rem;
+    height: 19rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .calculator_blank_box .calculator_blank1,
+.inner_content .auction_house_top .top_carving_calculator .calculator_blank_box .calculator_blank2,
+.inner_content .auction_house_top .top_carving_calculator .calculator_blank_box .calculator_blank3,
+.inner_content .auction_house_top .top_carving_calculator .calculator_blank_box .calculator_blank4 {
+    width: 16rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(30, 30, 40);
+    border: 1px solid rgb(100, 100, 100);
+    color: white;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.inner_content .auction_house_top .top_carving_calculator .calculator_small_blank1,
+.inner_content .auction_house_top .top_carving_calculator .calculator_small_blank2,
+.inner_content .auction_house_top .top_carving_calculator .calculator_small_blank3,
+.inner_content .auction_house_top .top_carving_calculator .calculator_small_blank4,
+.inner_content .auction_house_top .top_carving_calculator .calculator_small_blank5,
+.inner_content .auction_house_top .top_carving_calculator .calculator_small_blank6 {
+    width: 8rem;
+    height: 3rem;
+    display: flex;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    background-color: rgb(30, 30, 40);
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+}
+
+.calculator_button_box {
+    /* width: 17rem; */
+    /* height: 5rem; */
+    /* display: flex; */
+    /* flex-flow: column; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    display: inline-block;
+    line-height: 4rem;
+    text-align: center;
+    width: 17%;
+    margin-left: 2%;
+}
+
+.calculator_button_box .reset_button {
+    width: 100%;
+    height: 4rem;
+    background-color: rgb(50, 50, 50);
+    /* font-family: 'NanumSquare', sans-serif !important; */
+    border-radius: 5px;
+    font-size: 1.6rem;
+    color: white;
+    /* display: flex;
+        flex-flow: row;
+        justify-content: center;
+        align-items: center; */
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.calculator_button_box .search_button {
+    width: 15rem;
+    height: 9rem;
+    background-color: rgb(96, 70, 199);
+    font-family: 'NanumSquare', sans-serif !important;
+    border-radius: 5px;
+    font-size: 1.8rem;
+    color: white;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator_input_text input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.calculator_input_text input:focus {
+    outline: none;
+}
+
+
+/* 엄혜용 수정 */
+.on_off {
+    width: 9rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.on_off .toggle {
+    width: 7rem !important;
+    height: 100% !important;
+    background-color: none !important;
+    border: none !important;
+}
+
+.toggle-on {
+    background: rgb(96, 70, 199) !important;
+    border: none !important;
+    color: white;
+    font-size: 1.4rem !important;
+    font-weight: bold !important;
+    font-family: 'Noto Sans KR', sans-serif !important;
+}
+
+.toggle-off {
+    color: white;
+    font-size: 1.4rem !important;
+    font-weight: bold !important;
+    font-family: 'Noto Sans KR', sans-serif !important;
+    background: rgb(30, 30, 40) !important
+}
+
+.decline_select {
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-family: 'Noto Sans KR', sans-serif !important;
+}
+
+.decline_select:focus {
+    outline: none;
+}
+
+.decline_select option {
+    font-size: 1.4rem;
+    font-family: 'Noto Sans KR', sans-serif !important;
+    background: rgb(30, 30, 40);
+    color: rgb(150, 150, 150);
+    cursor: pointer;
+}
+
+.explain {
+    color: white;
+    font-size: 1.4rem;
+    font-family: 'Noto Sans KR', sans-serif !important;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.explain .explain_top {
+    font-size: 2.2rem;
+}
+
+.explain .explain_content {
+    line-height: 3rem;
+}
+
+.modal {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(20, 20, 30, .8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+@media all and (min-width:0px) and (max-width:1099px) {
+    .carving_modal_wrapper {
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        overflow-y: auto;
+        width: 100%;
+        height: 100%;
+        background: rgba(20, 20, 30, .8);
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        /* font-family: 'Noto Sans KR', sans-serif; */
+        font-size: 1.5rem;
+        display: none;
+    }
+
+    /* 메인박스 시작 */
+    .modal_main_box {
+        width: 100%;
+        overflow: auto;
+        background-color: white;
+    }
+
+    .modal_main_box .modal_head {
+        width: 100%;
+        height: 7rem;
+        background-color: rgb(30, 30, 50);
+        /* font-family: 'nanumsquare'; */
+        font-size: 2.4rem;
+        font-weight: 500;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .modal_main_box .modal_head .modal_head_text {
+        margin-left: 2rem;
+    }
+
+    .modal_main_box .modal_head .modal_head_exit {
+        margin-right: 2rem;
+    }
+
+    .modal_main_box .modal_body {
+        margin-top: 2rem;
+        margin: auto;
+        width: 91.30%;
+        overflow: auto;
+    }
+
+    /* 각 카테고리 헤드 */
+    .modal_main_box .modal_body .modal_body_tarit_title,
+    .modal_body_job_carve_title,
+    .modal_body_battle_carve_title,
+    .modal_body_decrease_carve_title {
+        height: 5rem;
+        font-family: 'nanumsquare';
+        font-size: 2.4rem;
+        color: black;
+        margin-top: 3rem;
+        border-bottom: 1px solid rgb(30, 30, 50);
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+    }
+
+    .modal_main_box .modal_body .tarit_title_button,
+    .job_carve_title_button,
+    .battle_carve_title_button,
+    .decrease_carve_title_button {
+        background-image: url("./static/img/lostark_auction_modal_icon1.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-left: auto;
+    }
+
+    .modal_main_box .modal_body .tarit_title_button,
+    .job_carve_title_button {
+        background-image: url("./static/img/lostark_auction_modal_icon1.png");
+    }
+
+    /* 특성 */
+    .modal_main_box .modal_body .modal_body_tarit_box {
+        height: 11rem;
+        background-color: white;
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-between;
+    }
+
+    .modal_main_box .modal_body .modal_body_tarit_box .trait_list {
+        width: 30.95%;
+        height: 4rem;
+        background-color: white;
+        border: 1px solid rgb(230, 230, 230);
+        margin-top: 1.5rem;
+        text-align: center;
+        padding-top: 0.7rem;
+    }
+
+    .modal_main_box .modal_body .modal_body_tarit_box .select_trait1 {
+        background-color: rgb(30, 30, 50);
+        color: white;
+    }
+
+    .modal_main_box .modal_body .modal_body_tarit_box .select_trait2 {
+        background-color: rgb(30, 30, 50);
+        color: white;
+    }
+
+    /* 각인 박스 */
+    .modal_main_box .modal_body .job_carve_select_box,
+    .battle_carve_select_box {
+        display: flex;
+        flex-wrap: wrap;
+        overflow: auto;
+        /* justify-content: space-around; */
+    }
+
+    .modal_main_box .modal_body .decrease_carve_select_box {
+        flex-wrap: wrap;
+        overflow: auto;
+        display: flex;
+        justify-content: space-between;
+        display: none;
+    }
+
+    .modal_main_box .modal_body .battle_carve_select_box {
+        display: flex;
+    }
+
+    /* 각인 선택 요소  */
+    .modal_main_box .modal_body .job_carve_selector,
+    .battle_carve_selector,
+    .decrease_carve_selector {
+        height: 10rem;
+        width: 30.90%;
+        background-color: black;
+        /* margin-right: 0.5rem; */
+        margin-top: 2rem;
+        display: flex;
+        flex-flow: column;
+        background-color: white;
+        border: 1px solid rgb(150, 150, 150);
+    }
+
+    .modal_main_box .modal_body .job_carve_selector,
+    .battle_carve_selector {
+        margin-right: 3.57%;
+    }
+
+    .modal_main_box .modal_body .job_carve_selector:nth-child(3n),
+    .battle_carve_selector:nth-child(3n) {
+        margin-right: 0;
+    }
+
+    .modal_main_box .modal_body .select_decrease_carve {
+        background-color: rgb(30, 30, 50);
+        color: white;
+    }
+
+    .modal_main_box .modal_body .img_box {
+        width: 100%;
+        height: 7rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal_main_box .modal_body .img_box .img_box_circle {
+        margin-top: 1.5rem;
+        height: 5rem;
+        width: 5rem;
+        border-radius: 50%;
+        background-color: white;
+        border: 1px solid rgb(150, 150, 150);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .modal_main_box .modal_body .text_box {
+        width: 100%;
+        height: 3.5rem;
+        padding-top: 0.5rem;
+        text-align: center;
+    }
+
+    /* 직업 각인 검색 */
+    .modal_main_box .modal_body .modal_body_job_carve_title .job_carve_title_search,
+    .battle_carve_title_search,
+    .modal_main_box .modal_body .modal_body_job_carve_title .job_carve_title_search,
+    .decrease_carve_title_search {
+        width: 18rem;
+        height: 3.5rem;
+        background-color: white;
+        margin-left: 2rem;
+        font-size: 1.4rem;
+        text-align: center;
+        /* font-family: 'Noto Sans KR', sans-serif; */
+        border: 1px solid rgb(150, 150, 150);
+    }
+
+    /* 취소 확인 버튼 구간 */
+    .modal_main_box .modal_body .bottom_button_box {
+        height: 5rem;
+        margin-top: 3rem;
+        display: flex;
+        flex-flow: row;
+        margin-bottom: 3rem;
+    }
+
+    .modal_main_box .modal_body .bottom_button_box .cancel_button {
+        width: 26.19%;
+        /* margin-left: 5rem; */
+        background-color: rgb(150, 150, 150);
+        border-radius: 5px;
+        /* font-family: 'NanumSquare', sans-serif; */
+        font-size: 1.8rem;
+        text-align: center;
+        color: white;
+        padding-top: 1.2rem;
+    }
+
+    .modal_main_box .modal_body .bottom_button_box .save_button {
+        width: 71.42%;
+        background-color: rgb(30, 30, 50);
+        border-radius: 5px;
+        /* font-family: 'NanumSquare', sans-serif; */
+        font-size: 1.8rem;
+        margin-left: 2.38%;
+        text-align: center;
+        color: white;
+        padding-top: 1.2rem;
+    }
+}
+
+@media all and (min-width:1100px) {
+    .carving_modal_wrapper {
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        overflow-y: auto;
+        width: 100%;
+        height: 100%;
+        background: rgba(20, 20, 30, .8);
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        /* font-family: 'Noto Sans KR', sans-serif; */
+        font-size: 1.5rem;
+        display: none;
+    }
+
+    /* 메인박스 시작 */
+    .modal_main_box {
+        width: 70rem;
+        padding-bottom: 2rem;
+        background-color: white;
+    }
+
+    .modal_main_box .modal_head {
+        width: 100%;
+        height: 7rem;
+        background-color: rgb(30, 30, 50);
+        /* font-family: 'nanumsquare'; */
+        font-size: 2.4rem;
+        font-weight: 500;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .modal_main_box .modal_head .modal_head_text {
+        margin-left: 2rem;
+    }
+
+    .modal_main_box .modal_head .modal_head_exit {
+        margin-right: 2rem;
+        cursor: pointer;
+    }
+
+    .modal_main_box .modal_body {
+        margin-top: 2rem;
+        margin: auto;
+        width: 66rem;
+        overflow: auto;
+    }
+
+    /* 각 카테고리 헤드 */
+    .modal_main_box .modal_body .modal_body_tarit_title,
+    .modal_body_job_carve_title,
+    .modal_body_battle_carve_title,
+    .modal_body_decrease_carve_title {
+        height: 5rem;
+        /* font-family: 'nanumsquare'; */
+        font-size: 2.4rem;
+        color: black;
+        margin-top: 2rem;
+        border-bottom: 1px solid rgb(30, 30, 50);
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+    }
+
+    .modal_main_box .modal_body .tarit_title_button,
+    .job_carve_title_button,
+    .battle_carve_title_button,
+    .decrease_carve_title_button {
+        background-image: url("/static/img/lostark_auction_modal_icon1.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-left: auto;
+        cursor: pointer;
+    }
+
+    .modal_main_box .modal_body .tarit_title_button,
+    .job_carve_title_button {
+        background-image: url("/static/img/lostark_auction_modal_icon1.png");
+    }
+
+    /* 특성 */
+    .modal_main_box .modal_body .modal_body_tarit_box {
+        height: 12rem;
+        background-color: white;
+        display: flex;
+        flex-flow: wrap;
+    }
+
+    .modal_main_box .modal_body .modal_body_tarit_box .trait_list {
+        width: 15rem;
+        height: 4rem;
+        background-color: white;
+        border: 1px solid rgb(230, 230, 230);
+        margin-right: 2rem;
+        margin-top: 2rem;
+        text-align: center;
+        padding-top: 0.7rem;
+        cursor: pointer;
+    }
+
+    .modal_main_box .modal_body .modal_body_tarit_box .select_trait1 {
+        background-color: rgb(30, 30, 50);
+        color: white;
+    }
+
+    .modal_main_box .modal_body .modal_body_tarit_box .select_trait2 {
+        background-color: rgb(30, 30, 50);
+        color: white;
+    }
+
+    /* 각인 박스 */
+    .modal_main_box .modal_body .job_carve_select_box,
+    .battle_carve_select_box {
+        height: 40rem;
+        display: flex;
+        flex-wrap: wrap;
+        /* overflow: scroll; */
+        overflow-x: hidden;
+    }
+
+    .modal_main_box .modal_body .decrease_carve_select_box {
+        height: 12rem;
+        display: flex;
+        flex-wrap: wrap;
+        display: none;
+    }
+
+    .modal_main_box .modal_body .battle_carve_select_box {
+        display: flex;
+    }
+
+    .modal_main_box .modal_body .battle_carve_select_box .active {
+        background: rgb(20, 20, 25);
+        color: white;
+    }
+
+    /* 스크롤바 */
+    .job_carve_select_box::-webkit-scrollbar,
+    .battle_carve_select_box::-webkit-scrollbar {
+        width: 1rem;
+    }
+
+    .job_carve_select_box::-webkit-scrollbar-thumb,
+    .battle_carve_select_box::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: rgba(100, 100, 100, 1);
+    }
+
+    .job_carve_select_box::-webkit-scrollbar-corner,
+    .battle_carve_select_box::-webkit-scrollbar-corner {
+        display: none;
+    }
+
+    /* 각인 선택 요소  */
+    .modal_main_box .modal_body .job_carve_selector,
+    .battle_carve_selector,
+    .decrease_carve_selector {
+        height: 10rem;
+        width: 15rem;
+        background-color: black;
+        /* margin-right: 0.5rem; */
+        margin-left: 1.2rem;
+        margin-top: 2rem;
+        display: flex;
+        flex-flow: column;
+        background-color: white;
+        border: 1px solid rgb(150, 150, 150);
+        cursor: pointer;
+    }
+
+    .modal_main_box .modal_body .select_carve1 {
+        background-color: rgb(30, 30, 50);
+        color: white;
+    }
+
+    .modal_main_box .modal_body .select_carve2 {
+        background-color: rgb(30, 30, 50);
+        color: white;
+    }
+
+    .modal_main_box .modal_body .select_decrease_carve {
+        background-color: rgb(30, 30, 50);
+        color: white;
+    }
+
+    .modal_main_box .modal_body .img_box {
+        width: 100%;
+        height: 7rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal_main_box .modal_body .img_box .img_box_circle {
+        margin-top: 1.5rem;
+        height: 5rem;
+        width: 5rem;
+        border-radius: 50%;
+        background-color: white;
+        border: 1px solid rgb(150, 150, 150);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .modal_main_box .modal_body .text_box {
+        width: 100%;
+        height: 3.5rem;
+        padding-top: 0.5rem;
+        text-align: center;
+    }
+
+    /* 직업 각인 검색 */
+    .battle_carve_title_search,
+    .decrease_carve_title_search {
+        width: 30rem;
+        height: 3.5rem;
+        background-color: white;
+        margin-left: 2rem;
+        font-size: 1.6rem;
+        text-align: center;
+        border: 1px solid rgb(150, 150, 150);
+        /* font-family: 'Noto Sans KR', sans-serif; */
+    }
+
+    .battle_carve_title_search:focus,
+    .decrease_carve_title_search:focus {
+        outline: none;
+    }
+
+
+
+    /* 취소 확인 버튼 구간 */
+    .modal_main_box .modal_body .bottom_button_box {
+        height: 5rem;
+        margin-top: 3rem;
+        display: flex;
+        flex-flow: row;
+    }
+
+    .modal_main_box .modal_body .bottom_button_box .cancel_button {
+        width: 15rem;
+        margin-left: 5rem;
+        background-color: rgb(150, 150, 150);
+        border-radius: 5px;
+        /* font-family: 'NanumSquare', sans-serif; */
+        font-size: 1.8rem;
+        text-align: center;
+        color: white;
+        padding-top: 1.2rem;
+        cursor: pointer;
+    }
+
+    .modal_main_box .modal_body .bottom_button_box .save_button {
+        width: 40rem;
+        background-color: rgb(30, 30, 50);
+        border-radius: 5px;
+        /* font-family: 'NanumSquare', sans-serif; */
+        font-size: 1.8rem;
+        margin-left: 1rem;
+        text-align: center;
+        color: white;
+        padding-top: 1.2rem;
+        cursor: pointer;
+    }
+}
+
+@media all and (min-width:0px) and (max-width:1099px) {
+    .background_box {
+        width: 100%;
+        background: rgb(20, 20, 25);
+    }
+
+    /* 모바일 */
+    .inner_content .handwork_box {
+        width: 100%;
+        margin: auto;
+        min-height: 100%;
+        flex-flow: row;
+        justify-content: space-evenly;
+        background: rgb(20, 20, 25);
+        padding-bottom: 1rem;
+        color: white;
+    }
+
+    .inner_content .handwork_box .handwork_box_inner {
+        width: 96%;
+        height: 66rem;
+        background: rgb(30, 30, 40);
+        margin: auto;
+        padding-top: 1rem;
+        margin-top: 1rem;
+    }
+
+    .inner_content .handwork_box .section_one {
+        width: 95.83%;
+        height: 19rem;
+        font-size: 1.6rem;
+        background: rgb(20, 20, 25);
+        display: flex;
+        flex-flow: wrap;
+        margin: auto;
+    }
+
+    .inner_content .handwork_box .section_one .section_one_first_wrapper {
+        width: 60.86%;
+        display: flex;
+        flex-flow: wrap;
+    }
+
+    .inner_content .handwork_box .section_one .section_one_second_wrapper {
+        width: 39.14%;
+        display: flex;
+        flex-flow: wrap;
+    }
+
+    .inner_content .handwork_box .section_one .section_one_top {
+        font-family: 'NanumSquare', sans-serif;
+        font-size: 1.8rem;
+        width: 100%;
+        height: 4rem;
+        background: rgb(50, 50, 50);
+        color: white;
+        text-align: center;
+        padding-top: 0.7rem;
+    }
+
+    .target_text1 {
+        height: auto;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 1.5rem;
+        margin-left: 7.14%;
+        width: 100%;
+    }
+
+    .target_text2 {
+        height: auto;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 1.5rem;
+        margin-left: 22.2%;
+    }
+
+    .target_in_box1,
+    .target_in_box2 {
+        width: 42.85%;
+        margin-left: 7.14%;
+        display: flex;
+    }
+
+    .target_in_box3 {
+        width: 66.6%;
+        margin-left: 22.2%;
+        display: flex;
+    }
+
+    .target_in_box1,
+    .target_in_box2,
+    .target_in_box3 {
+        height: 5rem;
+        border: 1px solid rgb(100, 100, 100);
+    }
+
+    #goal1,
+    #goal2,
+    #goal3 {
+        display: flex;
+        flex-flow: wrap;
+        width: 41.6%;
+        font-size: 2.4rem;
+        font-family: 'NanumSquare', sans-serif;
+        color: rgb(240, 150, 0);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .select_button {
+        width: 100%;
+        height: 3rem;
+        font-family: 'Noto Sans KR', sans-serif;
+        background: rgb(50, 50, 50);
+        color: white;
+        font-size: 1.3rem;
+    }
+
+    .select_button_wrapper {
+        display: flex;
+        flex-flow: wrap;
+        width: 50%;
+        align-items: center;
+    }
+
+    .traget_control_mobile {
+        width: 100%;
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+    }
+
+    .target_control_text {
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 1.3rem;
+        margin-left: 0.5rem;
+    }
+
+    #auto_adjust {
+        border: 1px solid rgb(100, 100, 100);
+        margin-top: 0.3rem;
+    }
+
+    .target_text,
+    .target_text_mobile {
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 1.5rem;
+        width: 100%;
+        padding-left: 2.38%;
+    }
+
+    .inner_content .handwork_box .section_two {
+        width: 95.83%;
+        height: 45rem;
+        font-size: 1.6rem;
+        background: rgb(20, 20, 25);
+        margin: auto;
+        margin-top: 2rem;
+    }
+
+    .inner_content .handwork_box .section_two .section_two_top {
+        font-family: 'NanumSquare', sans-serif;
+        font-size: 1.8rem;
+        width: 100%;
+        height: 4rem;
+        background: rgb(50, 50, 50);
+        color: white;
+        display: flex;
+        align-items: center;
+    }
+
+    .section_two_top_mobile {
+        width: 30%;
+        display: flex;
+        flex-flow: row;
+    }
+
+    .inner_content .handwork_box .section_two .section_two_top .section_two_top_text {
+        width: 40%;
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+    }
+
+    .section_two_top_select {
+        width: 30%;
+        display: flex;
+        flex-flow: row;
+        justify-content: flex-end;
+    }
+
+    .inner_content .handwork_box .section_two .section_two_top #num_attempts {
+        width: 70%;
+        font-family: 'Noto Sans KR', sans-serif;
+        background: rgb(30, 30, 40);
+        color: white;
+        border: 1px solid rgb(100, 100, 100);
+        font-size: 13px;
+        margin-right: 10%;
+    }
+
+    .abc_div {
+        width: 100%;
+        display: flex;
+        flex-flow: wrap;
+    }
+
+    .abc {
+        /* min-width: 5rem; */
+        width: 11.9%;
+        height: auto;
+        display: flex;
+        flex-flow: wrap;
+        margin-left: 2.38%;
+    }
+
+    .abc img {
+        width: 100%;
+        max-width: 5rem;
+        max-height: 5rem;
+    }
+
+    #ability1_sym,
+    #ability2_sym,
+    #ability3_sym {
+        width: 83.33%;
+        height: 5rem;
+        border: 1px solid rgb(50, 50, 50);
+        background-color: black;
+        padding-left: 2.7%;
+        padding-right: 2.7%;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #ability1_sym img,
+    #ability2_sym img,
+    #ability3_sym img {
+        width: 9.45%;
+        height: fit-content;
+        max-width: 3.5rem;
+        max-height: 5rem;
+    }
+
+    .ability_1_mobile,
+    .ability_2_mobile,
+    .ability_3_mobile {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        margin-right: 2.4%;
+        margin-top: 1rem;
+    }
+
+    #ability1_prob_mobile,
+    #ability2_prob_mobile,
+    #ability3_prob_mobile {
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 1.8rem;
+        margin-right: 0.5rem;
+    }
+
+    #ability1_text_mobile,
+    #ability2_text_mobile,
+    #ability3_text_mobile {
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 1.7rem;
+        color: rgb(240, 150, 0);
+    }
+
+    .success_button1,
+    .success_button2,
+    .success_button3,
+    .fail_button1,
+    .fail_button2,
+    .fail_button3 {
+        width: 19.04%;
+        background: rgb(30, 30, 40);
+        border: 1px solid rgb(100, 100, 100);
+        font-size: 1.7rem;
+        color: white;
+        font-family: 'NanumSquare', sans-serif;
+        cursor: pointer;
+        margin-left: 2.38%;
+    }
+
+    .target_text,
+    .target_text_mobile {
+        margin-top: 1rem;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .cancel_button {
+        font-family: 'NanumSquare', sans-serif;
+        height: 4rem;
+        /* width: 24%;  */
+        width: 34%;
+        background: rgb(50, 50, 50);
+        color: white;
+        font-size: 1.6rem;
+        border: 1px solid rgb(100, 100, 100);
+        margin-right: 4%;
+    }
+
+    .reset_button {
+        font-family: 'NanumSquare', sans-serif;
+        height: 4rem;
+        width: 34%;
+        background: rgb(50, 50, 50);
+        color: white;
+        font-size: 1.6rem;
+        border: 1px solid rgb(100, 100, 100);
+        margin-right: 2%;
+    }
+
+    .section_three_top,
+    .section_four_top {
+        display: none;
+    }
+
+    .info_text_head {
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 1.8rem;
+        padding-left: 4%;
+        padding-top: 2rem;
+    }
+
+    .info_text_body {
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 1.5rem;
+        list-style: "- ";
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .how_to_use {
+        width: 96%;
+        background: rgb(30, 30, 40);
+        padding-bottom: 2rem;
+        margin: auto;
+        margin-bottom: 3rem;
+        margin-top: 2rem;
+    }
+
+    .target_control_box {
+        width: 96%;
+        height: 11rem;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: rgb(30, 30, 40);
+        justify-content: center;
+    }
+
+    .target_control_center {
+        width: 96%;
+        height: 4rem;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 1.8rem;
+        background: rgb(20, 20, 25);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .target_control_right {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .target_control_left {
+        display: none;
+    }
+
+    .ability_1,
+    .ability_2,
+    .ability_3,
+    .active_1_button,
+    .active_2_button,
+    .active_3_button {
+        display: none;
+    }
+
+    #cur_prob {
+        margin-left: 1rem;
+        font-family: 'Noto Sans KR', sans-serif;
+        color: rgb(240, 150, 0);
+        font-size: 1.8rem;
+    }
+}
+
+/* 백그라운드 박스 */
+@media all and (min-width:1100px) {
+    .inner_content .background_box {
+        width: 100%;
+        max-width: 110rem;
+        margin: auto;
+        min-height: 97rem;
+        background: rgb(30, 30, 40);
+        padding-bottom: 2rem;
+    }
+}
+
+@media all and (min-width:1100px) {
+
+    /* PC */
+    .inner_content .handwork_box {
+        width: 108rem;
+        display: flex;
+        flex-flow: column;
+        margin-top: 5rem;
+        justify-content: space-evenly;
+        background: rgb(20, 20, 25);
+        padding-left: 0;
+        padding-right: 0;
+        color: white;
+        margin: auto;
+        position: relative;
+        padding-bottom: 4rem;
+    }
+
+    .inner_content .handwork_box .handwork_box_inner {
+        width: 95.37%;
+        height: 31rem;
+        position: relative;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-evenly;
+        margin: auto;
+        margin-top: 3rem;
+        margin-bottom: 0;
+    }
+
+    .inner_content .handwork_box .section_one {
+        width: 13.59rem;
+        height: 29rem;
+        font-size: 1.6rem;
+        background: rgb(20, 20, 25);
+        display: block;
+        margin-top: 1rem;
+        flex-flow: column;
+        justify-content: space-between;
+    }
+
+    .inner_content .handwork_box .section_one .section_one_top {
+        font-family: 'NanumSquare', sans-serif;
+        font-size: 1.8rem;
+        width: 100%;
+        height: 4rem;
+        display: flex;
+        flex-flow: row;
+        background: rgb(50, 50, 50);
+        color: white;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .inner_content .handwork_box .section_two {
+        width: 43.68%;
+        height: 29rem;
+        font-size: 1.6rem;
+        background: rgb(20, 20, 25);
+        display: block;
+        margin-top: 1rem;
+    }
+
+    .abc_div {
+        width: 100%;
+        display: flex;
+        flex-flow: wrap;
+    }
+
+    .abc_div .target_text {
+        width: 100%;
+    }
+
+    .inner_content .handwork_box .section_two .section_two_top {
+        font-family: 'NanumSquare', sans-serif;
+        font-size: 1.8rem;
+        width: 100%;
+        height: 4rem;
+        display: flex;
+        flex-flow: row;
+        background: rgb(50, 50, 50);
+        color: white;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .section_two_top_mobile {
+        display: none;
+    }
+
+    .inner_content .handwork_box .section_two .section_two_top .section_two_top_text {
+        width: 60%;
+        display: flex;
+        flex-flow: row;
+        justify-content: flex-end;
+    }
+
+    .inner_content .handwork_box .section_two .section_two_top .section_two_top_select {
+        width: 40%;
+        display: flex;
+        flex-flow: row;
+        justify-content: flex-end;
+        margin-right: 1rem;
+    }
+
+    .inner_content .handwork_box .section_three {
+        width: 19.41%;
+        height: 29rem;
+        font-size: 1.6rem;
+        background: rgb(20, 20, 25);
+        display: block;
+        margin-top: 1rem;
+    }
+
+    .inner_content .handwork_box .section_three .section_three_top {
+        font-family: 'NanumSquare', sans-serif;
+        font-size: 1.8rem;
+        width: 100%;
+        height: 4rem;
+        display: flex;
+        flex-flow: row;
+        background: rgb(50, 50, 50);
+        color: white;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .inner_content .handwork_box .section_three .empty_spaces {
+        height: 3.5rem;
+        background: rgba(255, 255, 255, 0);
+    }
+
+    .inner_content .handwork_box .section_three .ability_1,
+    .inner_content .handwork_box .section_three .ability_2,
+    .inner_content .handwork_box .section_three .ability_3 {
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        align-items: center;
+        height: 5rem;
+    }
+
+    .inner_content .handwork_box .section_three .ability_1 {
+        margin-bottom: 1rem;
+    }
+
+    .inner_content .handwork_box .section_four {
+        width: 18.44%;
+        height: 29rem;
+        font-size: 1.6rem;
+        background: rgb(20, 20, 25);
+        display: block;
+        margin-top: 1rem;
+    }
+
+    .inner_content .handwork_box .section_four .empty_spaces {
+        height: 3.5rem;
+        background: rgba(255, 255, 255, 0);
+    }
+
+    .inner_content .handwork_box .section_four .active_1_button,
+    .inner_content .handwork_box .section_four .active_2_button,
+    .inner_content .handwork_box .section_four .active_3_button {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 5rem;
+    }
+
+    .inner_content .handwork_box .section_four .active_1_button {
+        margin-bottom: 1rem;
+    }
+
+    .inner_content .handwork_box .section_four .active_1_button button,
+    .inner_content .handwork_box .section_four .active_2_button button,
+    .inner_content .handwork_box .section_four .active_3_button button {
+        width: 8rem;
+        height: 4rem;
+        background: rgb(30, 30, 40);
+        border: 1px solid rgb(100, 100, 100);
+        font-size: 1.7rem;
+        color: white;
+        font-family: 'NanumSquare', sans-serif;
+        cursor: pointer;
+    }
+
+    .inner_content .handwork_box .section_four .section_four_top {
+        font-family: 'NanumSquare', sans-serif;
+        font-size: 1.8rem;
+        width: 100%;
+        height: 4rem;
+        display: flex;
+        flex-flow: row;
+        background: rgb(50, 50, 50);
+        color: white;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .target_text,
+    .target_text1,
+    .target_text2 {
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 1.5rem;
+        height: 3.5rem;
+        display: flex;
+        align-items: center;
+        margin-left: 1rem;
+    }
+
+    .target_text_mobile {
+        display: none;
+    }
+
+    .target_in_box1,
+    .target_in_box2,
+    .target_in_box3 {
+        width: 12rem;
+        height: 5rem;
+        border: 1px solid rgb(50, 50, 50);
+        margin: auto;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .target_in_box1 {
+        margin-bottom: 1rem;
+    }
+
+    .select_button {
+        font-family: 'Noto Sans KR', sans-serif;
+        width: 6rem;
+        height: 3rem;
+        background: rgb(50, 50, 50);
+        color: white;
+        font-size: 1.3rem;
+        padding-left: 1rem;
+    }
+
+    #goal1,
+    #goal2,
+    #goal3 {
+        font-size: 18pt;
+        color: rgb(240, 150, 0);
+        margin-right: 1rem;
+
+    }
+
+    #num_attempts {
+        font-family: 'Noto Sans KR', sans-serif;
+        width: 6rem;
+        background: rgb(30, 30, 40);
+        color: white;
+        border: 1px solid rgb(100, 100, 100);
+        font-size: 1.3rem;
+    }
+
+    .abc {
+        width: 11.11%;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    #A {
+        margin-bottom: 1rem;
+    }
+
+    #ability1_sym,
+    #ability2_sym,
+    #ability3_sym {
+        width: 80%;
+        height: 5rem;
+        border: 1px solid rgb(50, 50, 50);
+        background-color: black;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    #ability1_sym img,
+    #ability2_sym img,
+    #ability3_sym img {
+        width: 10%;
+        height: auto;
+    }
+
+    .ability_1_mobile,
+    .ability_2_mobile,
+    .ability_3_mobile {
+        display: none;
+    }
+
+    #ability1_prob,
+    #ability2_prob,
+    #ability3_prob {
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 1.8rem;
+        margin-right: 0.5rem;
+    }
+
+    #ability1_text,
+    #ability2_text,
+    #ability3_text {
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 1.7rem;
+        color: rgb(240, 150, 0);
+    }
+
+    #auto_adjust {
+        border: 1px solid rgb(100, 100, 100);
+        transform: scale(1.3);
+        margin-right: 0.5rem;
+    }
+
+    .cancel_button {
+        width: 12rem;
+        background: rgb(50, 50, 50);
+        color: white;
+        font-size: 1.8rem;
+        height: 4rem;
+        border: 1px solid rgb(100, 100, 100);
+    }
+
+    .reset_button {
+        font-family: 'NanumSquare', sans-serif;
+        height: 4rem;
+        width: 12rem;
+        background: rgb(50, 50, 50);
+        color: white;
+        font-size: 1.8rem;
+        border: 1px solid rgb(100, 100, 100);
+        margin-left: 2rem;
+    }
+
+    .info_text_head {
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 1.8rem;
+    }
+
+    .info_text_body {
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 1.5rem;
+        list-style: "- ";
+        padding-left: 1rem;
+    }
+
+    .how_to_use {
+        margin-top: 3rem;
+        margin-left: 3.5rem;
+        margin-right: 3.5rem;
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    .traget_control_mobile {
+        display: none;
+    }
+
+    .target_control_left {
+        width: 12.5rem;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 1.3rem;
+        margin-left: 2rem;
+        margin-top: 1.5rem;
+    }
+
+    .target_control_center {
+        width: 45rem;
+        height: 4rem;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 1.8rem;
+        margin-top: 0.5rem;
+        background: rgb(20, 20, 25);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .target_control_right {
+        width: 40rem;
+        display: flex;
+        margin-top: 0.5rem;
+        margin-right: 1rem;
+        justify-content: flex-end
+    }
+
+    .inner_content .handwork_box .target_control_box {
+        width: 95.37%;
+        margin: auto;
+        margin-top: 0;
+        margin-bottom: 0;
+        height: 7rem;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+    }
+
+    #cur_prob {
+        margin-left: 1rem;
+        display: flex;
+        flex-flow: row;
+        color: rgb(240, 150, 0);
+    }
+}
